@@ -19,7 +19,8 @@ Automatically generates monthly budget spreadsheets with:
 # Python 3.7+
 python --version
 
-# Install dependencies
+# Setup Python Backend
+cd backend-python
 python -m venv venv
 .\venv\Scripts\Activate.ps1  # Windows
 pip install -r requirements.txt
@@ -28,68 +29,30 @@ pip install -r requirements.txt
 ### Generate Your Budget Template
 
 ```bash
-# Activate virtual environment
-.\venv\Scripts\Activate.ps1
-
-# Run the generator
-python outputs/budget-template/create_budget.py
+# From the backend-python directory
+python app.py
 ```
 
-The Excel file will be created at `outputs/budget-template/budget-template.xlsx`
-
-## Features
-
-### Budget Categories
-
-**Income**
-- Salary, Freelance/Side Income, Investment Income, Other Income
-
-**Expenses**
-- **Housing**: Rent/Mortgage, Utilities, Internet, Insurance, Maintenance
-- **Transportation**: Car Payment, Gas, Insurance, Maintenance, Public Transit
-- **Food**: Groceries, Dining Out, Coffee/Snacks
-- **Personal**: Healthcare, Entertainment, Clothing, Personal Care, Subscriptions
-- **Savings & Debt**: Emergency Fund, Retirement, Investments, Debt Payments
-- **Other**: Gifts/Donations, Miscellaneous
-
-### Automatic Calculations
-
-- **Total Income** - Sums all income sources
-- **Total Expenses** - Sums all expense categories
-- **Net Balance** - Income minus Expenses
-- **Savings Rate** - Percentage of income saved
-- **Difference Column** - Budgeted vs Actual comparison
-
-### Professional Formatting
-
-Following industry-standard Excel conventions:
-- 🔵 **Blue text** - User input cells (amounts you enter)
-- ⚫ **Black text** - Formulas and calculations
-- 🟡 **Yellow background** - Key assumptions (month/year)
-- **Currency format**: `$#,##0;($#,##0);-` (zeros show as "-")
-- **Percentages**: `0.0%` format
-
-## How to Use the Template
-
-1. **Open** the generated `budget-template.xlsx`
-2. **Update Month/Year** in the yellow-highlighted cell
-3. **Enter Budgeted Amounts** in column B (blue text)
-4. **Track Actual Spending** in column C (blue text)
-5. **Review** automatic calculations in totals and balance rows
-
-All formulas update automatically as you enter data!
+The Excel file will be created at `../outputs/budget-template/budget-template.xlsx`
 
 ## Project Structure
 
 ```
 automated-budget-tools/
+│
+├── backend-python/
+│   ├── app.py
+│   ├── requirements.txt
+│
+├── backend-node/
+│   ├── html2pptx-local.cjs
+│   ├── package.json
+│
+├── public/
 ├── outputs/
-│   └── budget-template/
-│       ├── budget-template.xlsx    # Generated Excel template
-│       └── create_budget.py        # Generator script
-├── requirements.txt                # Python dependencies
-└── README.md                       # This file
+├── README.md
 ```
+
 
 ## Dependencies
 
