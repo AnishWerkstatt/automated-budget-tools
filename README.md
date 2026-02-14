@@ -2,14 +2,7 @@
 
 Create professional Excel budget templates with Python. No manual formatting needed.
 
-## What This Does
-
-Automatically generates monthly budget spreadsheets with:
-- ✅ Pre-built income and expense categories
-- ✅ Automatic calculations (totals, balances, percentages)
-- ✅ Professional formatting with color-coded inputs and formulas
-- ✅ Currency formatting (zeros display as "-")
-- ✅ Ready-to-use templates in seconds
+Managing finances shouldn't feel like a second job. Most people either struggle with overly complex software or waste hours manually formatting Excel sheets every month. This project bridges that gap by providing a Python-powered engine that instantly builds professional, formula-ready budget templates. It handles the tedious setup—calculating totals, applying financial modeling styles, and organizing categories—so you can focus on making informed financial decisions instead of fighting with cell formatting.
 
 ## Quick Start
 
@@ -61,7 +54,7 @@ automated-budget-tools/
 
 ## Customization
 
-Want to modify the template? Edit `outputs/budget-template/create_budget.py`:
+Want to modify the template? Edit `backend-python/app.py`:
 - Add/remove budget categories
 - Change color schemes
 - Adjust formulas
