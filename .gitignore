@@ -1,16 +1,23 @@
 # Skill-generated documents and working files
-outputs/
+# Local environments and dependencies
+node_modules/
+venv/
+.env
+__pycache__/
+*.pyc
+
+# Skill outputs
+outputs/*/
+!outputs/budget-template/budget-template.xlsx
 
 # Claude Code
 .claude/
 
 # Python
-__pycache__/
 *.py[cod]
 *$py.class
 *.so
 .Python
-venv/
 env/
 ENV/
 
